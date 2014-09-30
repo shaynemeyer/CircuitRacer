@@ -23,40 +23,89 @@ typedef NS_OPTIONS(uint32_t, CRPhysicsCategory)
     SKSpriteNode *_car;
 }
 
--(void)didMoveToView:(SKView *)view {
-    /* Setup your scene here */
-    SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
-    
-    myLabel.text = @"Hello, World!";
-    myLabel.fontSize = 65;
-    myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
-                                   CGRectGetMidY(self.frame));
-    
-    [self addChild:myLabel];
-}
-
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    /* Called when a touch begins */
-    
-    for (UITouch *touch in touches) {
-        CGPoint location = [touch locationInNode:self];
-        
-        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
-        
-        sprite.xScale = 0.5;
-        sprite.yScale = 0.5;
-        sprite.position = location;
-        
-        SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
-        
-        [sprite runAction:[SKAction repeatActionForever:action]];
-        
-        [self addChild:sprite];
+- (id)initWithSize:(CGSize)size carType:(CRCarType)carType
+             level:(CRLevelType)levelType
+{
+    if (self = [super initWithSize:size]) {
+        _carType = carType;
+        _levelType = levelType;
+        [self initializeGame];
     }
+    return self;
 }
 
--(void)update:(CFTimeInterval)currentTime {
-    /* Called before each frame is rendered */
+- (void)initializeGame
+{
+    [self loadLevel];
+    
+    SKSpriteNode *track = [SKSpriteNode spriteNodeWithImageNamed:[NSString stringWithFormat:@"track_%i", _levelType]];
+    
+    track.position = CGPointMake(CGRectGetMidX(self.frame),
+                                 CGRectGetMidY(self.frame));
+    [self addChild:track];
+    
+    [self addCarAtPosition:CGPointMake(CGRectGetMidX(track.frame), 50)];
+    
+    self.physicsWorld.gravity = CGVectorMake(0, 0);
+    CGRect trackFrame = CGRectInset(track.frame, 40, 0);
+    self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:trackFrame];
+    
+    [self addObjectsForTrack:track];
 }
+
+- (void)loadLevel
+{
+    NSString *filePath =
+    [NSBundle.mainBundle pathForResource:@"LevelDetails"
+                                  ofType:@"plist"];
+    NSArray *level = [NSArray arrayWithContentsOfFile:filePath];
+    
+    NSNumber *timeInSeconds = level[_levelType-1][@"time"];
+    _timeInSeconds = [timeInSeconds doubleValue];
+    
+    NSNumber *laps = level[_levelType-1][@"laps"];
+    _noOfLaps = [laps intValue];
+}
+
+- (void)addCarAtPosition:(CGPoint)startPosition
+{
+    _car =
+    [SKSpriteNode spriteNodeWithImageNamed:[NSString stringWithFormat:@"car_%i",_carType]];
+    _car.position = startPosition;
+    [self addChild:_car];
+    _car.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:_car.frame.size];
+    _car.physicsBody.categoryBitMask = CRBodyCar;
+    _car.physicsBody.collisionBitMask = CRBodyBox;
+    _car.physicsBody.contactTestBitMask = CRBodyBox;
+    _car.physicsBody.allowsRotation = NO;
+}
+
+- (void)addBoxAt:(CGPoint)point
+{
+    SKSpriteNode *box = [SKSpriteNode spriteNodeWithImageNamed:@"box"];
+    box.position = point;
+    box.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:box.size];
+    box.physicsBody.categoryBitMask = CRBodyBox;
+    box.physicsBody.linearDamping = 1;
+    box.physicsBody.angularDamping = 1;
+    [self addChild:box];
+}
+
+- (void)addObjectsForTrack:(SKSpriteNode*)track
+{
+    // 1
+    SKNode *innerBoundary = [SKNode node];
+    innerBoundary.position = track.position;
+    [self addChild:innerBoundary];
+    
+    CGSize size = CGSizeMake(180, 120);
+    innerBoundary.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:size];
+    innerBoundary.physicsBody.dynamic = NO;
+    
+    [self addBoxAt:CGPointMake(track.position.x + 130, track.position.y)];
+    [self addBoxAt:CGPointMake(track.position.x - 200, track.position.y)];
+}
+
+
 
 @end
