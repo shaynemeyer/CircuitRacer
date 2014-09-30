@@ -7,7 +7,11 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "GameVariables.h"
 
 @interface GameScene : SKScene
+
+- (id)initWithSize:(CGSize)size carType:(CRCarType)carType
+             level:(CRLevelType)levelType;
 
 @end

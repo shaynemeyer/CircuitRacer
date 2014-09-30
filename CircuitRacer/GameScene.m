@@ -8,7 +8,20 @@
 
 #import "GameScene.h"
 
+typedef NS_OPTIONS(uint32_t, CRPhysicsCategory)
+{
+    CRBodyCar = 1 << 0,
+    CRBodyBox = 1 << 1,
+};
+
 @implementation GameScene
+{
+    CRCarType _carType;
+    CRLevelType _levelType;
+    NSTimeInterval _timeInSeconds;
+    int _noOfLaps;
+    SKSpriteNode *_car;
+}
 
 -(void)didMoveToView:(SKView *)view {
     /* Setup your scene here */

@@ -149,6 +149,7 @@
 		ED7F0E0E19DAE792004F755A /* lap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lap.wav; sourceTree = "<group>"; };
 		ED7F0E0F19DAE792004F755A /* nitro.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = nitro.wav; sourceTree = "<group>"; };
 		ED7F0E1019DAE792004F755A /* sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sprites.atlas; sourceTree = "<group>"; };
+		ED7F0E4619DAE88D004F755A /* GameVariables.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameVariables.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +212,7 @@
 			children = (
 				ED7F0DAD19DAE761004F755A /* Info.plist */,
 				ED7F0DAE19DAE761004F755A /* main.m */,
+				ED7F0E4619DAE88D004F755A /* GameVariables.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -678,6 +680,7 @@
 				ED7F0DD319DAE761004F755A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ED7F0DD419DAE761004F755A /* Build configuration list for PBXNativeTarget "CircuitRacerTests" */ = {
 			isa = XCConfigurationList;
@@ -686,6 +689,7 @@
 				ED7F0DD619DAE761004F755A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
