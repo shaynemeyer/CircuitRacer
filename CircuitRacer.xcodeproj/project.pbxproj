@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED7F0DAF19DAE761004F755A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7F0DAE19DAE761004F755A /* main.m */; };
+		ED7F0DB219DAE761004F755A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7F0DB119DAE761004F755A /* AppDelegate.m */; };
+		ED7F0DB519DAE761004F755A /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7F0DB419DAE761004F755A /* GameScene.m */; };
+		ED7F0DB719DAE761004F755A /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = ED7F0DB619DAE761004F755A /* GameScene.sks */; };
+		ED7F0DBA19DAE761004F755A /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7F0DB919DAE761004F755A /* GameViewController.m */; };
+		ED7F0DBD19DAE761004F755A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED7F0DBB19DAE761004F755A /* Main.storyboard */; };
+		ED7F0DBF19DAE761004F755A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED7F0DBE19DAE761004F755A /* Images.xcassets */; };
+		ED7F0DC219DAE761004F755A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED7F0DC019DAE761004F755A /* LaunchScreen.xib */; };
+		ED7F0DCE19DAE761004F755A /* CircuitRacerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7F0DCD19DAE761004F755A /* CircuitRacerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ED7F0DC819DAE761004F755A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED7F0DA119DAE760004F755A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED7F0DA819DAE761004F755A;
+			remoteInfo = CircuitRacer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ED7F0DA919DAE761004F755A /* CircuitRacer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircuitRacer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED7F0DAD19DAE761004F755A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED7F0DAE19DAE761004F755A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ED7F0DB019DAE761004F755A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		ED7F0DB119DAE761004F755A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		ED7F0DB319DAE761004F755A /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		ED7F0DB419DAE761004F755A /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		ED7F0DB619DAE761004F755A /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		ED7F0DB819DAE761004F755A /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		ED7F0DB919DAE761004F755A /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		ED7F0DBC19DAE761004F755A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ED7F0DBE19DAE761004F755A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		ED7F0DC119DAE761004F755A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		ED7F0DC719DAE761004F755A /* CircuitRacerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CircuitRacerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED7F0DCC19DAE761004F755A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED7F0DCD19DAE761004F755A /* CircuitRacerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircuitRacerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED7F0DA619DAE761004F755A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED7F0DC419DAE761004F755A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED7F0DA019DAE760004F755A = {
+			isa = PBXGroup;
+			children = (
+				ED7F0DAB19DAE761004F755A /* CircuitRacer */,
+				ED7F0DCA19DAE761004F755A /* CircuitRacerTests */,
+				ED7F0DAA19DAE761004F755A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ED7F0DAA19DAE761004F755A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED7F0DA919DAE761004F755A /* CircuitRacer.app */,
+				ED7F0DC719DAE761004F755A /* CircuitRacerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED7F0DAB19DAE761004F755A /* CircuitRacer */ = {
+			isa = PBXGroup;
+			children = (
+				ED7F0DB019DAE761004F755A /* AppDelegate.h */,
+				ED7F0DB119DAE761004F755A /* AppDelegate.m */,
+				ED7F0DB319DAE761004F755A /* GameScene.h */,
+				ED7F0DB419DAE761004F755A /* GameScene.m */,
+				ED7F0DB619DAE761004F755A /* GameScene.sks */,
+				ED7F0DB819DAE761004F755A /* GameViewController.h */,
+				ED7F0DB919DAE761004F755A /* GameViewController.m */,
+				ED7F0DBB19DAE761004F755A /* Main.storyboard */,
+				ED7F0DBE19DAE761004F755A /* Images.xcassets */,
+				ED7F0DC019DAE761004F755A /* LaunchScreen.xib */,
+				ED7F0DAC19DAE761004F755A /* Supporting Files */,
+			);
+			path = CircuitRacer;
+			sourceTree = "<group>";
+		};
+		ED7F0DAC19DAE761004F755A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED7F0DAD19DAE761004F755A /* Info.plist */,
+				ED7F0DAE19DAE761004F755A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ED7F0DCA19DAE761004F755A /* CircuitRacerTests */ = {
+			isa = PBXGroup;
+			children = (
+				ED7F0DCD19DAE761004F755A /* CircuitRacerTests.m */,
+				ED7F0DCB19DAE761004F755A /* Supporting Files */,
+			);
+			path = CircuitRacerTests;
+			sourceTree = "<group>";
+		};
+		ED7F0DCB19DAE761004F755A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED7F0DCC19DAE761004F755A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED7F0DA819DAE761004F755A /* CircuitRacer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED7F0DD119DAE761004F755A /* Build configuration list for PBXNativeTarget "CircuitRacer" */;
+			buildPhases = (
+				ED7F0DA519DAE761004F755A /* Sources */,
+				ED7F0DA619DAE761004F755A /* Frameworks */,
+				ED7F0DA719DAE761004F755A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CircuitRacer;
+			productName = CircuitRacer;
+			productReference = ED7F0DA919DAE761004F755A /* CircuitRacer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ED7F0DC619DAE761004F755A /* CircuitRacerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED7F0DD419DAE761004F755A /* Build configuration list for PBXNativeTarget "CircuitRacerTests" */;
+			buildPhases = (
+				ED7F0DC319DAE761004F755A /* Sources */,
+				ED7F0DC419DAE761004F755A /* Frameworks */,
+				ED7F0DC519DAE761004F755A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED7F0DC919DAE761004F755A /* PBXTargetDependency */,
+			);
+			name = CircuitRacerTests;
+			productName = CircuitRacerTests;
+			productReference = ED7F0DC719DAE761004F755A /* CircuitRacerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED7F0DA119DAE760004F755A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Maynesoft LLC";
+				TargetAttributes = {
+					ED7F0DA819DAE761004F755A = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					ED7F0DC619DAE761004F755A = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = ED7F0DA819DAE761004F755A;
+					};
+				};
+			};
+			buildConfigurationList = ED7F0DA419DAE760004F755A /* Build configuration list for PBXProject "CircuitRacer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ED7F0DA019DAE760004F755A;
+			productRefGroup = ED7F0DAA19DAE761004F755A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED7F0DA819DAE761004F755A /* CircuitRacer */,
+				ED7F0DC619DAE761004F755A /* CircuitRacerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED7F0DA719DAE761004F755A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED7F0DC219DAE761004F755A /* LaunchScreen.xib in Resources */,
+				ED7F0DBF19DAE761004F755A /* Images.xcassets in Resources */,
+				ED7F0DB719DAE761004F755A /* GameScene.sks in Resources */,
+				ED7F0DBD19DAE761004F755A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED7F0DC519DAE761004F755A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED7F0DA519DAE761004F755A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED7F0DBA19DAE761004F755A /* GameViewController.m in Sources */,
+				ED7F0DB219DAE761004F755A /* AppDelegate.m in Sources */,
+				ED7F0DB519DAE761004F755A /* GameScene.m in Sources */,
+				ED7F0DAF19DAE761004F755A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED7F0DC319DAE761004F755A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED7F0DCE19DAE761004F755A /* CircuitRacerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ED7F0DC919DAE761004F755A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED7F0DA819DAE761004F755A /* CircuitRacer */;
+			targetProxy = ED7F0DC819DAE761004F755A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ED7F0DBB19DAE761004F755A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED7F0DBC19DAE761004F755A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ED7F0DC019DAE761004F755A /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED7F0DC119DAE761004F755A /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ED7F0DCF19DAE761004F755A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ED7F0DD019DAE761004F755A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED7F0DD219DAE761004F755A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CircuitRacer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ED7F0DD319DAE761004F755A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CircuitRacer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		ED7F0DD519DAE761004F755A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CircuitRacerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CircuitRacer.app/CircuitRacer";
+			};
+			name = Debug;
+		};
+		ED7F0DD619DAE761004F755A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CircuitRacerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CircuitRacer.app/CircuitRacer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED7F0DA419DAE760004F755A /* Build configuration list for PBXProject "CircuitRacer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED7F0DCF19DAE761004F755A /* Debug */,
+				ED7F0DD019DAE761004F755A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED7F0DD119DAE761004F755A /* Build configuration list for PBXNativeTarget "CircuitRacer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED7F0DD219DAE761004F755A /* Debug */,
+				ED7F0DD319DAE761004F755A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ED7F0DD419DAE761004F755A /* Build configuration list for PBXNativeTarget "CircuitRacerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED7F0DD519DAE761004F755A /* Debug */,
+				ED7F0DD619DAE761004F755A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED7F0DA119DAE760004F755A /* Project object */;
+}
