@@ -15,6 +15,7 @@
 {
     SKView *_skView;
     AnalogControl *_analogControl;
+    GameScene *_scene;
 }
 
 - (void)viewWillLayoutSubviews
@@ -38,7 +39,19 @@
                                                                          padSide,
                                                                          padSide)];
         [self.view addSubview:_analogControl];
+        
+        // add an observer to listen monitor "relativePosition" property
+        [_analogControl addObserver:scene
+                         forKeyPath:@"relativePosition"
+                            options:NSKeyValueObservingOptionNew
+                            context:nil];
     }
+}
+
+// to prevent memory leaks remove the observer when you don't need updates anymore.
+-(void)dealloc
+{
+    [_analogControl removeObserver:_scene forKeyPath:@"relativePosition"];
 }
 
 @end

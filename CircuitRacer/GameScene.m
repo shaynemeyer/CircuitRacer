@@ -7,6 +7,7 @@
 //
 
 #import "GameScene.h"
+#import "AnalogControl.h"
 
 typedef NS_OPTIONS(uint32_t, CRPhysicsCategory)
 {
@@ -22,6 +23,7 @@ typedef NS_OPTIONS(uint32_t, CRPhysicsCategory)
     int _noOfLaps;
     SKSpriteNode *_car;
     SKLabelNode *_laps, *_time;
+    int _maxSpeed;
 }
 
 - (id)initWithSize:(CGSize)size carType:(CRCarType)carType
@@ -54,6 +56,7 @@ typedef NS_OPTIONS(uint32_t, CRPhysicsCategory)
     [self addObjectsForTrack:track];
     [self addGameUIForTrack:track];
     
+    _maxSpeed = 125 * (1 + _carType);
 }
 
 - (void)loadLevel
@@ -126,6 +129,25 @@ typedef NS_OPTIONS(uint32_t, CRPhysicsCategory)
     _time.position = CGPointMake(track.position.x, track.position.y - 10);
     
     [self addChild:_time];
+}
+
+#pragma mark 
+#pragma mark - Analog Controller methods
+
+-(void)analogControlUpdated:(AnalogControl *)analogControl
+{
+    [_car.physicsBody setVelocity:CGVectorMake(analogControl.relativePosition.x * _maxSpeed,
+                                               -analogControl.relativePosition.y * _maxSpeed)];
+}
+
+#pragma mark
+#pragma mark - Observer Methods
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if ([keyPath isEqualToString:@"relativePosition"]) {
+        [self analogControlUpdated:object];
+    }
 }
 
 @end
