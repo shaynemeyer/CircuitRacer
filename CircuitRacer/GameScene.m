@@ -21,6 +21,7 @@ typedef NS_OPTIONS(uint32_t, CRPhysicsCategory)
     NSTimeInterval _timeInSeconds;
     int _noOfLaps;
     SKSpriteNode *_car;
+    SKLabelNode *_laps, *_time;
 }
 
 - (id)initWithSize:(CGSize)size carType:(CRCarType)carType
@@ -51,6 +52,8 @@ typedef NS_OPTIONS(uint32_t, CRPhysicsCategory)
     self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:trackFrame];
     
     [self addObjectsForTrack:track];
+    [self addGameUIForTrack:track];
+    
 }
 
 - (void)loadLevel
@@ -106,6 +109,23 @@ typedef NS_OPTIONS(uint32_t, CRPhysicsCategory)
     [self addBoxAt:CGPointMake(track.position.x - 200, track.position.y)];
 }
 
-
+-(void)addGameUIForTrack:(SKSpriteNode *)track
+{
+    _laps = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+    _laps.text = [NSString stringWithFormat:@"Laps: %i", _noOfLaps];
+    _laps.fontSize = 28;
+    _laps.fontColor = [UIColor whiteColor];
+    _laps.position = CGPointMake(track.position.x, track.position.y + 20);
+    
+    [self addChild:_laps];
+    
+    _time = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+    _time.text = [NSString stringWithFormat:@"Time: %.lf", _timeInSeconds];
+    _time.fontSize = 28;
+    _time.fontColor = [UIColor whiteColor];
+    _time.position = CGPointMake(track.position.x, track.position.y - 10);
+    
+    [self addChild:_time];
+}
 
 @end
