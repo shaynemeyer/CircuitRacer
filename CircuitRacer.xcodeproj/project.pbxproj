@@ -73,6 +73,7 @@
 		EDCB5D2219DC260D00640824 /* SKNode+SKTExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCB5D1B19DC260D00640824 /* SKNode+SKTExtras.m */; };
 		EDCB5D2319DC260D00640824 /* SKTAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCB5D1D19DC260D00640824 /* SKTAudio.m */; };
 		EDCB5D2419DC260D00640824 /* SKTUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = EDCB5D1F19DC260D00640824 /* SKTUtils.mm */; };
+		EDCB5D2719DC26AA00640824 /* AnalogControl.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCB5D2619DC26AA00640824 /* AnalogControl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,6 +166,8 @@
 		EDCB5D1D19DC260D00640824 /* SKTAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTAudio.m; sourceTree = "<group>"; };
 		EDCB5D1E19DC260D00640824 /* SKTUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTUtils.h; sourceTree = "<group>"; };
 		EDCB5D1F19DC260D00640824 /* SKTUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SKTUtils.mm; sourceTree = "<group>"; };
+		EDCB5D2519DC26AA00640824 /* AnalogControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnalogControl.h; sourceTree = "<group>"; };
+		EDCB5D2619DC26AA00640824 /* AnalogControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnalogControl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +212,8 @@
 				ED7F0DD719DAE792004F755A /* Art */,
 				ED7F0DB019DAE761004F755A /* AppDelegate.h */,
 				ED7F0DB119DAE761004F755A /* AppDelegate.m */,
+				EDCB5D2519DC26AA00640824 /* AnalogControl.h */,
+				EDCB5D2619DC26AA00640824 /* AnalogControl.m */,
 				ED7F0DB319DAE761004F755A /* GameScene.h */,
 				ED7F0DB419DAE761004F755A /* GameScene.m */,
 				ED7F0DB619DAE761004F755A /* GameScene.sks */,
@@ -526,6 +531,7 @@
 				EDCB5D2419DC260D00640824 /* SKTUtils.mm in Sources */,
 				EDCB5D2019DC260D00640824 /* SKAction+SKTExtras.m in Sources */,
 				ED7F0DB519DAE761004F755A /* GameScene.m in Sources */,
+				EDCB5D2719DC26AA00640824 /* AnalogControl.m in Sources */,
 				EDCB5D2219DC260D00640824 /* SKNode+SKTExtras.m in Sources */,
 				ED7F0DAF19DAE761004F755A /* main.m in Sources */,
 			);

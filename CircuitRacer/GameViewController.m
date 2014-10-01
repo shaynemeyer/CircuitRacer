@@ -12,21 +12,22 @@
 
 
 @implementation GameViewController
+{
+    SKView *_skView;
+}
 
 - (void)viewWillLayoutSubviews
 {
     [super viewWillLayoutSubviews];
     
-    SKView *skView = (SKView *)self.view;
-    
-    if (!skView.scene) {
-        skView = [[SKView alloc] initWithFrame:self.view.bounds];
-        GameScene *scene = [[GameScene alloc] initWithSize:skView.bounds.size
+    if (!_skView) {
+        _skView = [[SKView alloc] initWithFrame:self.view.bounds];
+        GameScene *scene = [[GameScene alloc] initWithSize:_skView.bounds.size
                                               carType:CRYellowCar
                                                 level:CRLevelEasy];
         scene.scaleMode = SKSceneScaleModeAspectFill;
-        [skView presentScene:scene];
-        [self.view addSubview:skView];
+        [_skView presentScene:scene];
+        [self.view addSubview:_skView];
     }
 }
 
