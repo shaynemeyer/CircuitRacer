@@ -19,9 +19,8 @@
     
     SKView *skView = (SKView *)self.view;
     
-    if (!skView) {
-        skView =
-        [[SKView alloc] initWithFrame:self.view.bounds];
+    if (!skView.scene) {
+        skView = [[SKView alloc] initWithFrame:self.view.bounds];
         GameScene *scene = [[GameScene alloc] initWithSize:skView.bounds.size
                                               carType:CRYellowCar
                                                 level:CRLevelEasy];
