@@ -9,11 +9,12 @@
 #import "GameViewController.h"
 #import "GameScene.h"
 #import "GameVariables.h"
-
+#import "AnalogControl.h"
 
 @implementation GameViewController
 {
     SKView *_skView;
+    AnalogControl *_analogControl;
 }
 
 - (void)viewWillLayoutSubviews
@@ -28,6 +29,15 @@
         scene.scaleMode = SKSceneScaleModeAspectFill;
         [_skView presentScene:scene];
         [self.view addSubview:_skView];
+        
+        const float padSide = 128;
+        const float padPadding = 10;
+        
+        _analogControl = [[AnalogControl alloc] initWithFrame:CGRectMake(padPadding,
+                                                                         _skView.frame.size.height - padPadding - padSide,
+                                                                         padSide,
+                                                                         padSide)];
+        [self.view addSubview:_analogControl];
     }
 }
 
