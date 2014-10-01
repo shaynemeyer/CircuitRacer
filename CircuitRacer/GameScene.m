@@ -8,6 +8,7 @@
 
 #import "GameScene.h"
 #import "AnalogControl.h"
+#import "SKTUtils.h"
 
 typedef NS_OPTIONS(uint32_t, CRPhysicsCategory)
 {
@@ -138,6 +139,11 @@ typedef NS_OPTIONS(uint32_t, CRPhysicsCategory)
 {
     [_car.physicsBody setVelocity:CGVectorMake(analogControl.relativePosition.x * _maxSpeed,
                                                -analogControl.relativePosition.y * _maxSpeed)];
+    
+    if (!CGPointEqualToPoint(analogControl.relativePosition, CGPointZero)) {
+        _car.zRotation = CGPointToAngle(CGPointMake(analogControl.relativePosition.x,
+                                                    -analogControl.relativePosition.y));
+    }
 }
 
 #pragma mark
