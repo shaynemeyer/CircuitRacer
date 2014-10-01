@@ -45,5 +45,54 @@
     return self;
 }
 
+-(void)updateKnobWithPosition:(CGPoint)position
+{
+    // subtract position of touch from center of joystick. This gives you the relative offset for where the touch is.
+    CGPoint positionToCenter = CGPointSubtract(position, _baseCenter);
+    CGPoint direction;
+    
+    if (CGPointEqualToPoint(positionToCenter, CGPointZero)) {
+        direction = CGPointZero;
+    } else {
+        direction = CGPointNormalize(positionToCenter);
+    }
+    
+    // Calculate the radius and the length of the relative offset.
+    float radius = self.frame.size.width / 2;
+    float length = CGPointLength(positionToCenter);
+    
+    // If the length is greater than the radius, then make a vector that points in the same direction but has the length of the radius instead.
+    if (length > radius) {
+        length = radius;
+        positionToCenter = CGPointMultiplyScalar(direction, radius);
+    }
+    
+    CGPoint relativePosition = CGPointMake(direction.x * length / radius,
+                                           direction.y * length / radius);
+    _knobImageView.center = CGPointAdd(_baseCenter, positionToCenter);
+    self.relativePosition = relativePosition;
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    CGPoint touchLocation = [[touches anyObject] locationInView:self];
+    [self updateKnobWithPosition:touchLocation];
+}
+
+-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    CGPoint touchLocation = [[touches anyObject] locationInView:self];
+    [self updateKnobWithPosition:touchLocation];
+}
+
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self updateKnobWithPosition:_baseCenter];
+}
+
+-(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self updateKnobWithPosition:_baseCenter];
+}
 
 @end
